@@ -61,6 +61,11 @@ body {
 .form__status {
     position: absolute;
     color: var(--jle-success);
+    top: 10px;
+    right: calc(100% + 24px);
+    width: 200px;
+    text-align: right;
+    font-size: 120%;
 }
 
 
@@ -83,6 +88,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 24px 0 12px;
+}
+
+.btn__save-container {
+    position: relative;
 }
 
 

@@ -9,12 +9,14 @@ let PR_COLUMNS = [];
 let CODE_REVIEWERS_LABELS = [];
 
 const CACHED_LABELS = {};
+let COLUMNS_SELECTOR = '';
 
 const SELECTORS = {
+  board: '[data-test-id="software-board.board-area"]',
   column: '[data-component-selector="platform-board-kit.ui.column.draggable-column"]',
   columnHeader: '[data-component-selector="platform-board-kit.ui.column-title"]',
   card: '[data-component-selector="platform-board-kit.ui.card-container"]',
-  labelsContainer: '[data-testid="platform-card.common.ui.custom-fields.custom-card-field-list"]',
+  labelsContainer: 'div[class*="_content"] > div:last-child',
 };
 
 const STATUS_COLOR = {
@@ -94,22 +96,21 @@ async function populateIssueCard(card) {
     }));
   }
 
-  $card.find(SELECTORS.labelsContainer).append(CACHED_LABELS[idAttr]);
+  $card.find(SELECTORS.labelsContainer).before(CACHED_LABELS[idAttr]);
 }
 
-function getColumns() {
-  const columns = [];
-  $(SELECTORS.column).each((index, column) => {
-    const columnTitle = $(column).find(SELECTORS.columnHeader).attr('aria-label');
+function getColumnsSelector() {
+  const selectors = [];
+  $(SELECTORS.columnHeader).each((index, header) => {
+    const columnTitle = $(header).attr('aria-label');
     if (!columnTitle) {
       throw new Error('Can\'t find column headers');
     }
     if (PR_COLUMNS.indexOf(columnTitle) !== -1) {
-      columns.push(column);
+      selectors.push(`${SELECTORS.column}:nth-child(${index + 1})`);
     }
   });
-
-  return columns;
+  return selectors.join(',');
 }
 
 function $getLabelsHeader(idAttr, pullRequests) {
@@ -196,7 +197,7 @@ function $getCodeReviewers(author, pendingReviewers, reviews) {
     );
 }
 
-function watchColumn(mutations) {
+function watchCards(mutations) {
   mutations.forEach((mutation) => {
     mutation.addedNodes.forEach((node) => {
       let $card = $(node).find(SELECTORS.card);
@@ -205,7 +206,8 @@ function watchColumn(mutations) {
         // Need to extract the ticket name. A bit hacky, but it works.
         $card = $(node).data('id', `card-${$cont.parent().next().text()}`);
       }
-      if ($card.length) {
+      // Check card and parent column.
+      if ($card.length && $card.parents(COLUMNS_SELECTOR).length) {
         populateIssueCard($card);
       }
     });
@@ -213,16 +215,21 @@ function watchColumn(mutations) {
 }
 
 function addPRLabels() {
-  const observer = new MutationObserver(watchColumn);
+  COLUMNS_SELECTOR = getColumnsSelector();
 
-  getColumns().forEach((column) => {
+  if (!COLUMNS_SELECTOR) {
+    throw new Error('Empty columns selector');
+  }
+
+  const observer = new MutationObserver(watchCards);
+  observer.observe($(SELECTORS.board).get(0), {
+    childList: true,
+    subtree: true,
+  });
+
+  $(COLUMNS_SELECTOR).toArray().forEach((column) => {
     $(column).find(SELECTORS.card).each((index, card) => {
       populateIssueCard(card);
-    });
-
-    observer.observe(column, {
-      childList: true,
-      subtree: true,
     });
   });
 }
