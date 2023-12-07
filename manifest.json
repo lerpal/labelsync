@@ -1,6 +1,6 @@
 {
     "name": "GitHub LabelSync for JIRA",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "This extension adds GitHub labels from associated Pull Requests to JIRA cards, providing essential insights at a glance",
     "manifest_version": 3,
     "content_scripts": [{

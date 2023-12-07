@@ -11,7 +11,7 @@ byId('save').addEventListener('click', () => {
   }, () => {
     // Update status to let user know options were saved.
     const status = byId('status');
-    status.textContent = 'Options saved.';
+    status.textContent = 'Options saved';
     setTimeout(() => {
       status.textContent = '';
     }, 5000);
