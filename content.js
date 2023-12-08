@@ -8,8 +8,14 @@ const JIRA_HOSTNAME = window.location.hostname;
 let PR_COLUMNS = [];
 let CODE_REVIEWERS_LABELS = [];
 
+// eslint-disable-next-line max-len
+const REFRESH_SVG = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.99999 11.3333C4.5111 11.3333 3.24999 10.8167 2.21666 9.78334C1.18332 8.75001 0.666656 7.48889 0.666656 6.00001C0.666656 4.51112 1.18332 3.25001 2.21666 2.21667C3.24999 1.18334 4.5111 0.666672 5.99999 0.666672C6.76666 0.666672 7.49999 0.825005 8.19999 1.14167C8.89999 1.45834 9.49999 1.91112 9.99999 2.50001V0.666672H11.3333V5.33334H6.66666V4.00001H9.46666C9.1111 3.37778 8.62499 2.88889 8.00832 2.53334C7.39166 2.17778 6.72221 2.00001 5.99999 2.00001C4.88888 2.00001 3.94443 2.38889 3.16666 3.16667C2.38888 3.94445 1.99999 4.88889 1.99999 6.00001C1.99999 7.11112 2.38888 8.05556 3.16666 8.83334C3.94443 9.61112 4.88888 10 5.99999 10C6.85555 10 7.62777 9.75556 8.31666 9.26667C9.00555 8.77778 9.48888 8.13334 9.76666 7.33334H11.1667C10.8555 8.51112 10.2222 9.47223 9.26666 10.2167C8.3111 10.9611 7.22221 11.3333 5.99999 11.3333Z"/></svg>';
+// eslint-disable-next-line max-len
+const ARROW_SVG = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.6 8.5L4 3.9L5.4 2.5L11.4 8.5L5.4 14.5L4 13.1L8.6 8.5Z" /></svg>';
+
 const CACHED_LABELS = {};
 let COLUMNS_SELECTOR = '';
+let IS_LIGHT_THEME = false;
 
 const SELECTORS = {
   board: '[data-test-id="software-board.board-area"]',
@@ -119,6 +125,7 @@ function $getLabelsHeader(idAttr, pullRequests) {
     .append('<div class="jle_header__label">Pull Requests</div>')
     .append(
       $('<button class="jle_header__refresh" />')
+        .append(REFRESH_SVG)
         .attr('title', `${pullRequests.length} pull request(s)`)
         .on('click', () => {
           const $card = $(`#${idAttr}`);
@@ -141,6 +148,7 @@ function $getPullRequestDetails(pullRequest) {
     .append(
       $('<span class="jle_pr_details__info" />')
         .append(`<span class="jle_pr_details__repo">${repo}</span>`)
+        .append(ARROW_SVG)
         .append(`<span class="jle_pr_details__pr">${id}</span>`),
     )
     .append($getBadge(status, statusColor).addClass('jle_pr_details__status'));
@@ -149,8 +157,10 @@ function $getPullRequestDetails(pullRequest) {
 function $getBadge(text, color) {
   const $badge = $(`<span class="jle_badge">${text}</span>`);
   const labelStyle = $badge.get(0).style;
-  labelStyle.setProperty('--color', color);
-  labelStyle.setProperty('--bg-color', getLabelBackgroundColor(color));
+  const colors = getLabelColors(color);
+
+  labelStyle.setProperty('--color', colors.color);
+  labelStyle.setProperty('--bg-color', colors.backgroundColor);
 
   return $badge;
 }
@@ -185,7 +195,7 @@ function $getCodeReviewers(author, pendingReviewers, reviews) {
   return $('<div class="jle_pr_reviewers" />')
     .append(
       $('<button class="jle_pr_reviewers__label">Reviewers</button>')
-        .append('<div class="jle_pr_reviewers__icon" />')
+        .append(`<div class="jle_pr_reviewers__icon">${ARROW_SVG}</div>`)
         .on('click', (e) => {
           $(e.target).parents('.jle_pr_reviewers').toggleClass('jle_pr_reviewers--opened');
         }),
@@ -214,7 +224,18 @@ function watchCards(mutations) {
   });
 }
 
+function setThemeFlag() {
+  const styles = window.getComputedStyle(document.body);
+  IS_LIGHT_THEME = getRGBComponents(styles.getPropertyValue('background-color'))[0] > 200;
+
+  if (IS_LIGHT_THEME) {
+    document.body.classList.add('jle_white_theme');
+  }
+}
+
 function addPRLabels() {
+  setThemeFlag();
+
   COLUMNS_SELECTOR = getColumnsSelector();
 
   if (!COLUMNS_SELECTOR) {
@@ -241,18 +262,33 @@ function buildArray(str) {
   return str.split(',').map((element) => element.trim()).filter(Boolean);
 }
 
-function getLabelBackgroundColor(color) {
-  const rgb = getRGBComponents(color);
+const LABEL_COLOR_CACHE = {};
+function getLabelColors(color) {
+  if (!LABEL_COLOR_CACHE[color]) {
+    let rgb = getRGBComponents(color);
 
-  return `rgba(${rgb.R}, ${rgb.G}, ${rgb.B}, 0.16)`;
+    if (IS_LIGHT_THEME) {
+      const min = 178;
+      do {
+        // Make labels darker, c < 0.
+        const c = Math.min(...rgb.map((i) => (i > min ? -0.3 : 1)));
+        if (c < 0) {
+          rgb = getRGBComponents(pSBC(c, `rgb(${rgb.join(', ')})`));
+        }
+      } while (rgb.filter((i) => i > min).length);
+    }
+    LABEL_COLOR_CACHE[color] = {
+      color: `rgb(${rgb.join(', ')})`,
+      backgroundColor: `rgba(${rgb.join(', ')}, 0.16)`,
+    };
+  }
+  return LABEL_COLOR_CACHE[color];
 }
 
 function getRGBComponents(color) {
-  return {
-    R: parseInt(color.substring(1, 3), 16),
-    G: parseInt(color.substring(3, 5), 16),
-    B: parseInt(color.substring(5, 7), 16),
-  };
+  return color.startsWith('rgb')
+    ? color.split('(').at(-1).split(',').map((p) => parseInt(p.trim(), 10))
+    : [1, 3, 5].map((i) => parseInt(color.substring(i, i + 2), 16));
 }
 
 /** **********************
@@ -311,3 +347,32 @@ async function getGithubReviews(cardId, repositoryName, pullRequestId) {
     },
   );
 }
+
+/* eslint-disable */
+// Color darken/lighten helper
+// https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors#13542669
+function pSBC(p,c0,c1,l) {
+  let r,g,b,P,f,t,h,i=parseInt,m=Math.round,a=typeof(c1)==="string";
+  if(typeof(p)!=="number"||p<-1||p>1||typeof(c0)!="string"||(c0[0]!=='r'&&c0[0]!=='#')||(c1&&!a))return null;
+  if(!this.pSBCr)this.pSBCr=(d)=>{
+    let n=d.length,x={};
+    if(n>9){
+      [r,g,b,a]=d=d.split(","),n=d.length;
+      if(n<3||n>4)return null;
+      x.r=i(r[3]==="a"?r.slice(5):r.slice(4)),x.g=i(g),x.b=i(b),x.a=a?parseFloat(a):-1
+    }else{
+      if(n===8||n===6||n<4)return null;
+      if(n<6)d="#"+d[1]+d[1]+d[2]+d[2]+d[3]+d[3]+(n>4?d[4]+d[4]:"");
+      d=i(d.slice(1),16);
+      if(n===9||n===5)x.r=d>>24&255,x.g=d>>16&255,x.b=d>>8&255,x.a=m((d&255)/0.255)/1000;
+      else x.r=d>>16,x.g=d>>8&255,x.b=d&255,x.a=-1
+    }return x};
+  h=c0.length>9,h=a?c1.length>9?true:c1==="c"?!h:false:h,f=this.pSBCr(c0),P=p<0,t=c1&&c1!=="c"?this.pSBCr(c1):P?{r:0,g:0,b:0,a:-1}:{r:255,g:255,b:255,a:-1},p=P?p*-1:p,P=1-p;
+  if(!f||!t)return null;
+  if(l)r=m(P*f.r+p*t.r),g=m(P*f.g+p*t.g),b=m(P*f.b+p*t.b);
+  else r=m((P*f.r**2+p*t.r**2)**0.5),g=m((P*f.g**2+p*t.g**2)**0.5),b=m((P*f.b**2+p*t.b**2)**0.5);
+  a=f.a,t=t.a,f=a>=0||t>=0,a=f?a<0?t:t<0?a:a*P+t*p:0;
+  if(h)return"rgb"+(f?"a(":"(")+r+","+g+","+b+(f?","+m(a*1000)/1000:"")+")";
+  else return"#"+(4294967296+r*16777216+g*65536+b*256+(f?m(a*255):0)).toString(16).slice(1,f?undefined:-2)
+}
+/* eslint-enable */
