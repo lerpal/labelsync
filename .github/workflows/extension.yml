@@ -1,0 +1,25 @@
+name: Create a new version of extension
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    name: Build and upload the extension archive
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - name: Create zip with the new version of extension
+        run: |
+          sed -i "s/RELEASE_VERSION/$RELEASE_VERSION/" manifest.json
+          zip labelsync-$RELEASE_VERSION.zip -@ < extension.files
+      - name: Upload zip to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: labelsync-${{ env.RELEASE_VERSION }}.zip
+          asset_name: labelsync-${{ env.RELEASE_VERSION }}.zip
+          tag: ${{ github.ref }}
