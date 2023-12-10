@@ -21,5 +21,7 @@ After installing the extension, follow these steps to integrate it with GitHub:
 ## Contribution
 Your contributions are welcome! If you have any improvements or new features to propose, feel free to submit a pull request. We appreciate your help in making this extension better.
 
+If you are adding or removing some file from the extension, please make sure you update file `extension.files` 
+
 ## License
 MIT © [Lerpal](https://lerpal.com/)
