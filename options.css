@@ -2,7 +2,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #16181b;
-    width: 680px;
+    min-width: 540px;
     --jle-accent: #ec5000;
     --jle-gray: #79747e;
     --jle-success: #0c8a17;
