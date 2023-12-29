@@ -1,0 +1,41 @@
+.row {
+  display: flex;
+  flex-direction: row;
+
+  & > * {
+    flex: 1;
+    margin-left: 12px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.remove,
+.add {
+  background-color: var(--jle-accent);
+  padding: 3px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 19px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.remove {
+  background-color: #ec0000;
+  flex: 0;
+  align-self: flex-start;
+  height: 25px;
+  line-height: 1;
+  margin-top: 48px;
+  border-radius: 15px;
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

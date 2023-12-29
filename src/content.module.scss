@@ -1,0 +1,11 @@
+body {
+  --jle-text-color: #b6c2cf;
+  --jle-hover-color: #323940;
+  --jle-border-color: rgba(166, 197, 226, 0.16);
+}
+
+body.light {
+  --jle-text-color: #172b4d;
+  --jle-hover-color: #f1f2f4;
+  --jle-border-color: rgba(23, 43, 77, 0.16);
+}

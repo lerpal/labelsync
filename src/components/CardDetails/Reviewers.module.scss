@@ -1,0 +1,17 @@
+.action {
+  svg {
+    transition: transform 0.5s;
+    transform: rotate(90deg) scale(0.9);
+  }
+
+  &.opened svg {
+    transform: rotate(-90deg) scale(0.9);
+  }
+}
+
+.compact {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 11px;
+}

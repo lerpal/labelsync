@@ -1,0 +1,30 @@
+$height: 40px;
+
+.root {
+  position: fixed;
+  top: -$height;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 120%;
+  opacity: 0;
+  padding: 0 20px;
+  left: 0;
+  right: 0;
+  transition: top 1s, opacity 0.5s;
+  z-index: 99;
+
+  &.visible {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.type-success {
+  background: #0c8a17;
+  color: #e0e0e0;
+}
+
+
+
