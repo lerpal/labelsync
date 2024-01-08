@@ -1,0 +1,22 @@
+{
+    "name": "LabelSync for JIRA",
+    "version": "0.0.1",
+    "description": "This extension adds GitHub or GitLab labels and reviewers from associated Pull Requests to JIRA cards, providing essential insights at a glance",
+    "manifest_version": 3,
+    "content_scripts": [{
+        "css": ["content.css"],
+        "js": ["content.js"],
+        "matches": ["https://*.atlassian.net/jira/software/c/projects/*/boards/*"],
+        "run_at": "document_idle"
+    }],
+    "permissions": [
+        "storage"
+    ],
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    },
+    "icons": {
+        "128": "icon128.png"
+    }
+}

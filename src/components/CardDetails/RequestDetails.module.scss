@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--jle-text-color);
+  padding: 8px 0;
+  font-size: 11px;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: var(--ds-link, #0065FF);
+
+    & .info svg {
+      fill: var(--ds-link, #0065FF);
+    }
+  }
+
+  .repo {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .info {
+    display: inline-flex;
+    align-items: center;
+    line-height: 16px;
+
+    & svg {
+      fill: var(--jle-text-color);
+      transform: scale(0.95);
+      margin: 0 4px;
+    }
+  }
+}

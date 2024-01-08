@@ -1,0 +1,26 @@
+.root {
+  padding: 8px 0;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.help {
+  background-color: var(--jle-options-color);
+  color: var(--jle-options-background);
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  cursor: help;
+
+  &:after {
+    max-width: 300px;
+  }
+}

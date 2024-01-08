@@ -1,82 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LabelSync for JIRA Options</title>
-    <link rel="stylesheet" href="/options.css">
-</head>
-
-<body>
-    <div class="container">
-        <form>
-            <h2 class="form__title">
-                Settings:
-            </h2>
-
-            <div class="form__item">
-                <label class="form__item-label" for="github_access_token">GitHub Access Token</label>
-                <input class="form__item-input" id="github_access_token" type="text" />
-            </div>
-
-            <div class="form__item form__item--checkbox">
-                <label class="form__item-checkbox" for="hide_labels_on_closed_prs">Exclude labels for closed Pull Requests</label>
-                <div class="checkbox__wrapper">
-                    <input class="checkbox__btn" type="checkbox" id="hide_labels_on_closed_prs" name="hide_labels_on_closed_prs" />
-                    <label for="hide_labels_on_closed_prs" class="lb1"></label>
-                </div>
-            </div>
-
-            <div class="form__item form__item--checkbox">
-                <label class="form__item-checkbox" for="hide_closed_prs">Exclude closed Pull Requests</label>
-                <div class="checkbox__wrapper">
-                    <input class="checkbox__btn" type="checkbox" id="hide_closed_prs" name="hide_closed_prs" />
-                    <label for="hide_closed_prs" class="lb1"></label>
-                </div>
-            </div>
-
-            <div class="form__item">
-                <label class="form__item-label" for="pr_columns">Comma-separated list of JIRA column titles where labels should be displayed</label>
-                <input class="form__item-input" id="pr_columns" type="text" placeholder="In Progress, In Review" />
-            </div>
-
-
-            <h2 class="form__title">
-                Feature Flags:
-            </h2>
-
-            <div class="form__item form__item--checkbox">
-                <label class="form__item-checkbox" for="ff_code_reviewers">Display Code Reviewers</label>
-                <div class="checkbox__wrapper">
-                    <input class="checkbox__btn" type="checkbox" id="ff_code_reviewers" name="ff_code_reviewers" />
-                    <label for="ff_code_reviewers" class="lb1"></label>
-                </div>
-            </div>
-
-            <div class="form__item form__item--checkbox">
-                <label class="form__item-checkbox" for="ff_code_reviewers">Display short Repository Name</label>
-                <div class="checkbox__wrapper">
-                    <input class="checkbox__btn" type="checkbox" id="ff_short_name" name="ff_short_name" />
-                    <label for="ff_short_name" class="lb1"></label>
-                </div>
-            </div>
-
-            <div class="btn__save-wrapper">
-                <div class="powered">
-                    <p class="powered__text">
-                        Powered by
-                    </p>
-                    <a href="http://lerpal.com" target="_blank" class="powered__link"><img class="powered__img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCA0OCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuNDc5NTggMTMuMDg1MkMzLjgwNTY5IDEzLjA5MzQgMy4xMzM1NCAxMy4wMTUgMi40Nzk1OCAxMi44NTIyQzIuMDM1NzUgMTIuNzQzOSAxLjYyMjAzIDEyLjUzNzEgMS4yNjkxNSAxMi4yNDdDMC45Nzc1MTMgMTEuOTk3IDAuNzY1ODMzIDExLjY2NjggMC42NjA0NTIgMTEuMjk3NEMwLjU0ODMyMSAxMC44ODczIDAuNDk0NDU4IDEwLjQ2MzQgMC41MDA0NSAxMC4wMzgzVjAuNEwzLjMyNDggMFY5LjU0MDg3QzMuMzI0OCA5Ljc2MzQ4IDMuMzQyMTkgOS45NjE3NCAzLjM4MDQ1IDEwLjEzOTFDMy40MTg3MSAxMC4zMTY1IDMuNDkxNzYgMTAuNDY2MSAzLjU5OTU4IDEwLjU4NzhDMy43MDc0MSAxMC43MDk2IDMuODYwNDUgMTAuODEwNCA0LjA2MjE5IDEwLjg4N0M0LjI2NzQxIDEwLjk2NyA0LjUzODcxIDExLjAxNTcgNC44Nzk1OCAxMS4wNEw0LjQ3OTU4IDEzLjA4NTJaTTUuNTkyNjIgOC42MDg3QzUuNTkyNjIgNy44Mjk1NyA1LjcyODI4IDcuMTUxMyA1Ljk5OTU4IDYuNTY2OTZDNi4yNDc0IDYuMDE4OCA2LjYwNjI4IDUuNTI4MDMgNy4wNTM1MSA1LjEyNTdDNy41MDA3NSA0LjcyMzM3IDguMDI2NjEgNC40MTgyMiA4LjU5Nzg0IDQuMjI5NTdDOS4xNzE3NSA0LjAyNzgzIDkuNzYzMDYgMy45MzA0MyAxMC4zNjgzIDMuOTMwNDNDMTEuNzgzOSAzLjkzMDQzIDEyLjkwMDQgNC4zMDk1NyAxMy43MjEzIDUuMDcxMzFDMTQuNTQ1NyA1LjgyOTU3IDE0Ljk1NjEgNi45NDk1NyAxNC45NTYxIDguNDI0MzVDMTQuOTUwNyA4LjczNTgyIDE0LjkzMSA5LjA0Njg3IDE0Ljg5NyA5LjM1NjUySDguNDkzNDlDOC41MjQ2NCA5LjYwODkyIDguNjE0NDggOS44NTA1IDguNzU1ODMgMTAuMDYxOUM4Ljg5NzE3IDEwLjI3MzMgOS4wODYwOCAxMC40NDg3IDkuMzA3NDEgMTAuNTczOUM5Ljc4NzQxIDEwLjg3MyAxMC40MzA5IDExLjAyMjYgMTEuMjQxMyAxMS4wMjI2QzExLjc1OTYgMTEuMDIyNiAxMi4yNjc0IDEwLjk4MDkgMTIuNzY0OCAxMC44OTc0QzEzLjI2NTcgMTAuODEzOSAxMy42NzI2IDEwLjcwOTYgMTMuOTg5MSAxMC41ODc4TDE0LjM2ODMgMTIuNjA1MkMxNC4yMTUyIDEyLjY3MTMgMTQuMDEzNSAxMi43Mzc0IDEzLjc1OTYgMTIuODAzNUMxMi44MSAxMy4wMjg1IDExLjgzOCAxMy4xNDUxIDEwLjg2MjIgMTMuMTUxM0MxMC4wNjc5IDEzLjE2NzkgOS4yNzY0OCAxMy4wNTAzIDguNTIxMzIgMTIuODAzNUM3LjkxMTYxIDEyLjYwMTkgNy4zNTAyNiAxMi4yNzYyIDYuODcyNjMgMTEuODQ3QzYuNDQxODkgMTEuNDQ5NCA2LjExMDY2IDEwLjk1NjEgNS45MDU2NyAxMC40MDdDNS42OTY5NyA5Ljg1MDQzIDUuNTkyNjIgOS4yNTIxNyA1LjU5MjYyIDguNjA4N1pNMTIuMjI1NyA3LjY1OTEzQzEyLjIxMzQgNy40NDkzMiAxMi4xNzI0IDcuMjQyMTggMTIuMTAzOSA3LjA0MzQ4QzEyLjAzNjEgNi44NDQ2NiAxMS45MjU3IDYuNjYzMDUgMTEuNzgwNCA2LjUxMTNDMTEuNjA1IDYuMzI2NDMgMTEuMzkwOCA2LjE4MjU2IDExLjE1MzMgNi4wODk5N0MxMC45MTU4IDUuOTk3MzggMTAuNjYwOSA1Ljk1ODM1IDEwLjQwNjUgNS45NzU2NUMxMC4wOSA1Ljk3NTY1IDkuODE4NzEgNi4wMjQzNSA5LjU5MjYyIDYuMTE4MjZDOS4zODU0NyA2LjIwMTEgOS4xOTcxIDYuMzI0NzggOS4wMzg3NSA2LjQ4MTk0QzguODgwMzkgNi42MzkxIDguNzU1MjkgNi44MjY1MiA4LjY3MDg5IDcuMDMzMDRDOC41OTAwNyA3LjIzNDk4IDguNTMwNjEgNy40NDQ4MiA4LjQ5MzQ5IDcuNjU5MTNIMTIuMjI1N1pNMjIuMDY1NyA2LjM2MTc0QzIxLjc2OTkgNi4yOTc2IDIxLjQ3MyA2LjIzODQ2IDIxLjE3NTIgNi4xODQzNUMyMC42MDE1IDYuMDg5OTUgMjAuMDE3NyA2LjA3MzU3IDE5LjQzOTYgNi4xMzU2NUMxOS4xOTI2IDYuMTYzNDggMTkuMDA4MyA2LjE5NDc4IDE4Ljg3OTYgNi4yMjYwOVYxMi45MTgzSDE2LjA1ODdWNC42Mjk1N0MxNi4wNTg3IDQuNjI5NTcgMTcuMTYxMyA0LjMyNjk2IDE3Ljg0NjUgNC4xODc4M0MxOC43ODczIDQuMDA5NjMgMTkuNzQ2MyAzLjk0NzcyIDIwLjcwMjIgNC4wMDM0OEMyMS4xMzM1IDQuMDM5MDggMjEuNTYzIDQuMDk0OCAyMS45ODkxIDQuMTcwNDRDMjIuMjA0OCA0LjIwODcgMjIuMzg1NyA0LjI1NzM5IDIyLjUzODcgNC4zMTMwNEwyMi4wNjU3IDYuMzYxNzRaTTI5LjY5MzUgOC42MDg3QzI5LjY5MzUgNy44NDM0OCAyOS40OTUyIDcuMjI3ODMgMjkuMTA1NyA2Ljc2ODdDMjguNzEyNiA2LjMwNjA5IDI4LjEzMTggNi4wNzY1MiAyNy4zNTk2IDYuMDc2NTJDMjYuOTQ3NiA2LjA3MjM1IDI2LjUzNTkgNi4xMDAyNiAyNi4xMjgzIDYuMTZWMTAuNjRDMjYuNjE0MiAxMC44NzAzIDI3LjE0NTQgMTAuOTg5MSAyNy42ODMxIDEwLjk4NzhDMjkuMDIyMiAxMC45ODc4IDI5LjY5MzUgMTAuMTk0OCAyOS42OTM1IDguNjA4N1pNMzIuNTczNSA4LjU0MjYxQzMyLjU3MzUgOS4yMTczOSAzMi40Nzk2IDkuODMzMDQgMzIuMjg4MyAxMC4zODk2QzMyLjExOTcgMTAuOTIxOSAzMS44MzUgMTEuNDEwMSAzMS40NTQ5IDExLjgxOTJDMzEuMDc0OCAxMi4yMjgyIDMwLjYwODYgMTIuNTQ3NyAzMC4wOSAxMi43NTQ4QzI5LjU0NzQgMTIuOTczOSAyOC45MjEzIDEzLjA4NTIgMjguMjE1MiAxMy4wODUyQzI3LjgyMjIgMTMuMDg1MiAyNy40NTcgMTMuMDUzOSAyNy4xMTI2IDEyLjk4NzhDMjYuNzcxOCAxMi45MTgzIDI2LjQ0NDggMTIuODI0MyAyNi4xMjgzIDEyLjcwMjZWMTZIMjMuMzAzOVY0LjQ2MjYxQzIzLjkzMTcgNC4zMDc1MiAyNC41NjgyIDQuMTkwMjEgMjUuMjEgNC4xMTEzQzI1LjU2ODMgNC4wNjk1NyAyNS45MzcgNC4wMzEzIDI2LjMwOTEgNC4wMDM0OEMyNi42ODEzIDMuOTc1NjUgMjcuMDM5NiAzLjk2MTc0IDI3LjM4MDUgMy45NjE3NEMyOC4yMDEzIDMuOTYxNzQgMjguOTM1MiA0LjA2OTU3IDI5LjU3ODcgNC4yODg3QzMwLjE3NzkgNC40Nzk4MSAzMC43MzE4IDQuNzkxMDcgMzEuMjA2NSA1LjIwMzQ4QzMxLjY1MjMgNS41OTgwOSAzMi4wMDAxIDYuMDkxMTIgMzIuMjIyMiA2LjY0MzQ4QzMyLjQ2MjggNy4yNDczNCAzMi41ODIxIDcuODkyNjUgMzIuNTczNSA4LjU0MjYxWk0zNy44MTE4IDExLjE4OTZDMzguMDkgMTEuMTg5NiAzOC4zNTQ0IDExLjE4MjYgMzguNjA4MyAxMS4xNzIyQzM4Ljg1ODcgMTEuMTYxNyAzOS4wNjM5IDExLjE0NDMgMzkuMjEzNSAxMS4xMjM1VjkuMjQxNzRDMzguODM4NiA5LjE3MDU3IDM4LjQ1NzYgOS4xMzY3OCAzOC4wNzYxIDkuMTQwODdDMzcuODExOCA5LjE0MDg3IDM3LjU2MTMgOS4xNTQ3OCAzNy4zMjgzIDkuMTgyNjFDMzcuMDk1MiA5LjIxMDQ0IDM2Ljg5IDkuMjYyNjEgMzYuNzEyNiA5LjMzOTEzQzM2LjUzNTIgOS40MTkxMyAzNi4zOTYxIDkuNTIzNDggMzYuMjk1MiA5LjY1NTY1QzM2LjE5NDQgOS43OTEzIDM2LjE0MjIgOS45NTQ3OCAzNi4xNDIyIDEwLjE1NjVDMzYuMTQyMiAxMC41NDYxIDM2LjI5MTggMTAuODEzOSAzNi41ODc0IDEwLjk2MzVDMzYuODg2NSAxMS4xMTMgMzcuMjkzNSAxMS4xODk2IDM3LjgxMTggMTEuMTg5NlpNMzcuNTg1NyAzLjkzMDQzQzM4LjQxNyAzLjkzMDQzIDM5LjExMjYgNC4wMTM5MSAzOS42NjkxIDQuMTc3MzlDNDAuMTYzMyA0LjMxMDkyIDQwLjYyMDMgNC41NTYwNSA0MS4wMDQ4IDQuODkzOTFDNDEuMzM4NyA1LjIwNjk2IDQxLjU3NTIgNS41ODI2MSA0MS43MTQ0IDYuMDI3ODNDNDEuODUzNSA2LjQ2OTU3IDQxLjkyMzEgNi45NjM0OCA0MS45MjMxIDcuNTA5NTdWMTIuNjcxM0M0MS41MTk2IDEyLjc0NzggNDAuOTU2MSAxMi44MzgzIDQwLjIzNjEgMTIuOTQ2MUMzOS41MTYxIDEzLjA1MDQgMzguNjQ2NSAxMy4xMDI2IDM3LjYyMDUgMTMuMTAyNkMzNi45NzcgMTMuMTAyNiAzNi4zOTI2IDEzLjA1MzkgMzUuODY3NCAxMi45NTNDMzUuMzkxNCAxMi44NjkxIDM0LjkzMzYgMTIuNzAzMiAzNC41MTQ0IDEyLjQ2MjZDMzQuMTQ5NCAxMi4yNDg3IDMzLjg0OCAxMS45NDEzIDMzLjY0MTMgMTEuNTcyMkMzMy40MjgyIDExLjE1NTEgMzMuMzI0MSAxMC42OTA4IDMzLjMzODcgMTAuMjIyNkMzMy4zMjQ0IDkuNzc5MDYgMzMuNDM4MSA5LjM0MDc2IDMzLjY2NjQgOC45NjAxNkMzMy44OTQ2IDguNTc5NTcgMzQuMjI3NiA4LjI3Mjc5IDM0LjYyNTcgOC4wNzY1MkMzNS4wNDc3IDcuODU0MzMgMzUuNTAxOSA3LjY5OTQyIDM1Ljk3MTggNy42MTczOUMzNi40Nzk2IDcuNTIzNDggMzcuMDAxMyA3LjQ3NDc4IDM3LjU0NzQgNy40NzQ3OEMzNy45MTI2IDcuNDc0NzggMzguMjM5NiA3LjQ4ODcgMzguNTIxMyA3LjUxNjUyQzM4LjgwNjUgNy41NDQzNSAzOS4wMzYxIDcuNTgyNjEgMzkuMjEzNSA3LjYyNDM1VjcuMzkxM0MzOS4yMTM1IDYuOTcwNDMgMzkuMDY3NCA2LjYzMzA0IDM4Ljc3ODcgNi4zNzU2NUMzOC40ODY1IDYuMTIxNzQgMzcuOTgyMiA1Ljk5MzA0IDM3LjI2MjIgNS45OTMwNEMzNi43ODIyIDUuOTkzMDQgMzYuMzA5MiA2LjAyNDM1IDM1LjgzOTYgNi4wODY5NkMzNS4zNzM1IDYuMTQ2MDkgMzQuOTcgNi4yMzMwNCAzNC42MjU3IDYuMzQ0MzVMMzQuMjY3NCA0LjM0NDM1QzM0LjczNTMgNC4yMjI0OCAzNS4yMTA0IDQuMTMwNyAzNS42OSA0LjA2OTU3QzM1Ljk3ODcgNC4wMzEzIDM2LjI4NDggNCAzNi42MDgzIDMuOTcyMTdDMzYuOTMxOCAzLjk0NDM1IDM3LjI1NTIgMy45MzA0MyAzNy41ODU3IDMuOTMwNDNaTTQ3LjQ1NyAxMS4wNEM0Ny4xNzk2IDExLjAyOTMgNDYuOTA1NCAxMC45Nzc3IDQ2LjY0MzEgMTAuODg3QzQ2LjQ2NTkgMTAuODI2MyA0Ni4zMDYgMTAuNzIzNyA0Ni4xNzcgMTAuNTg3OEM0Ni4wNjU5IDEwLjQ2MDUgNDUuOTkxNCAxMC4zMDU0IDQ1Ljk2MTMgMTAuMTM5MUM0NS45MjA1IDkuOTQyMzcgNDUuOTAwNiA5Ljc0MTgyIDQ1LjkwMjIgOS41NDA4N1YwTDQzLjA3NzggMC40VjEwLjAzODNDNDMuMDc3OCAxMC41MDQzIDQzLjEzMzUgMTAuOTI1MiA0My4yNDEzIDExLjI5NzRDNDMuMzQ1NyAxMS42Njk2IDQzLjU1MDkgMTEuOTg2MSA0My44NDY1IDEyLjI0N0M0NC4yMDA3IDEyLjUzNzEgNDQuNjE1NiAxMi43NDQgNDUuMDYwNCAxMi44NTIyQzQ1LjU3MTggMTIuOTk4MyA0Ni4yMzYxIDEzLjA3NDggNDcuMDYwNCAxMy4wODUyTDQ3LjQ1NyAxMS4wNFoiIGZpbGw9IiNFQzUwMDAiLz4KPC9zdmc+Cg==" alt="lerpal"></a>
-                </div>
-
-                <div class="btn__save-container">
-                    <div class="form__status" id="status"></div>
-                    <button class="btn__save" id="save" type="button">Save</button>
-                </div>
-            </div>
-        </form>
-
-        <script src="/options.js"></script>
-    </div>
-</body>
-
+  </head>
+  <body>
+    <div id="root" class="container"></div>
+    <script type="module" src="/src/options.tsx"></script>
+  </body>
 </html>

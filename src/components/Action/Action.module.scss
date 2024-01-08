@@ -1,0 +1,19 @@
+.root {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+
+  svg {
+    fill: var(--jle-text-color);
+  }
+
+  &:hover {
+    background-color: var(--jle-hover-color);
+    cursor: pointer;
+  }
+}

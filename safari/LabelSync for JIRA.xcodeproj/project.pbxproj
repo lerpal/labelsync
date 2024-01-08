@@ -1,0 +1,968 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A2E91272B419281009272F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E91262B419281009272F9 /* AppDelegate.swift */; };
+		3A2E91292B419281009272F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E91282B419281009272F9 /* SceneDelegate.swift */; };
+		3A2E912C2B419281009272F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E912A2B419281009272F9 /* LaunchScreen.storyboard */; };
+		3A2E912F2B419281009272F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E912D2B419281009272F9 /* Main.storyboard */; };
+		3A2E91382B419281009272F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E91372B419281009272F9 /* AppDelegate.swift */; };
+		3A2E913B2B419281009272F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91392B419281009272F9 /* Main.storyboard */; };
+		3A2E91432B419281009272F9 /* LabelSync for JIRA Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3A2E91422B419281009272F9 /* LabelSync for JIRA Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A2E914D2B419281009272F9 /* LabelSync for JIRA Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3A2E914C2B419281009272F9 /* LabelSync for JIRA Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3A2E91532B419281009272F9 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91162B419280009272F9 /* Main.html */; };
+		3A2E91542B419281009272F9 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91162B419280009272F9 /* Main.html */; };
+		3A2E91552B419281009272F9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91182B419280009272F9 /* Icon.png */; };
+		3A2E91562B419281009272F9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91182B419280009272F9 /* Icon.png */; };
+		3A2E91572B419281009272F9 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91192B419280009272F9 /* Style.css */; };
+		3A2E91582B419281009272F9 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91192B419280009272F9 /* Style.css */; };
+		3A2E91592B419281009272F9 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E911A2B419280009272F9 /* Script.js */; };
+		3A2E915A2B419281009272F9 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E911A2B419280009272F9 /* Script.js */; };
+		3A2E915B2B419281009272F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E911B2B419280009272F9 /* ViewController.swift */; };
+		3A2E915C2B419281009272F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E911B2B419280009272F9 /* ViewController.swift */; };
+		3A2E915D2B419281009272F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E911C2B419281009272F9 /* Assets.xcassets */; };
+		3A2E915E2B419281009272F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E911C2B419281009272F9 /* Assets.xcassets */; };
+		3A2E915F2B419281009272F9 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E911E2B419281009272F9 /* SafariWebExtensionHandler.swift */; };
+		3A2E91602B419281009272F9 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2E911E2B419281009272F9 /* SafariWebExtensionHandler.swift */; };
+		3A2E917A2B419282009272F9 /* lerpal.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91722B419282009272F9 /* lerpal.svg */; };
+		3A2E917B2B419282009272F9 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91732B419282009272F9 /* content.css */; };
+		3A2E917C2B419282009272F9 /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91742B419282009272F9 /* options.js */; };
+		3A2E917D2B419282009272F9 /* icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91752B419282009272F9 /* icon128.png */; };
+		3A2E917E2B419282009272F9 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91762B419282009272F9 /* manifest.json */; };
+		3A2E917F2B419282009272F9 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91772B419282009272F9 /* options.html */; };
+		3A2E91802B419282009272F9 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91782B419282009272F9 /* content.js */; };
+		3A2E91812B419282009272F9 /* options.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91792B419282009272F9 /* options.css */; };
+		3A2E91822B419282009272F9 /* lerpal.svg in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91722B419282009272F9 /* lerpal.svg */; };
+		3A2E91832B419282009272F9 /* content.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91732B419282009272F9 /* content.css */; };
+		3A2E91842B419282009272F9 /* options.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91742B419282009272F9 /* options.js */; };
+		3A2E91852B419282009272F9 /* icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91752B419282009272F9 /* icon128.png */; };
+		3A2E91862B419282009272F9 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91762B419282009272F9 /* manifest.json */; };
+		3A2E91872B419282009272F9 /* options.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91772B419282009272F9 /* options.html */; };
+		3A2E91882B419282009272F9 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91782B419282009272F9 /* content.js */; };
+		3A2E91892B419282009272F9 /* options.css in Resources */ = {isa = PBXBuildFile; fileRef = 3A2E91792B419282009272F9 /* options.css */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A2E91442B419281009272F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2E91102B419280009272F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A2E91412B419281009272F9;
+			remoteInfo = "LabelSync for JIRA Extension (iOS)";
+		};
+		3A2E914E2B419281009272F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A2E91102B419280009272F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A2E914B2B419281009272F9;
+			remoteInfo = "LabelSync for JIRA Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A2E91662B419281009272F9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3A2E91432B419281009272F9 /* LabelSync for JIRA Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E916D2B419281009272F9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3A2E914D2B419281009272F9 /* LabelSync for JIRA Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3A2E91172B419280009272F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		3A2E91182B419280009272F9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3A2E91192B419280009272F9 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		3A2E911A2B419280009272F9 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		3A2E911B2B419280009272F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A2E911C2B419281009272F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A2E911E2B419281009272F9 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		3A2E91232B419281009272F9 /* LabelSync for JIRA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LabelSync for JIRA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2E91262B419281009272F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A2E91282B419281009272F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3A2E912B2B419281009272F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A2E912E2B419281009272F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A2E91302B419281009272F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2E91352B419281009272F9 /* LabelSync for JIRA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LabelSync for JIRA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2E91372B419281009272F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A2E913A2B419281009272F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A2E913C2B419281009272F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2E913D2B419281009272F9 /* LabelSync for JIRA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LabelSync for JIRA.entitlements"; sourceTree = "<group>"; };
+		3A2E91422B419281009272F9 /* LabelSync for JIRA Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LabelSync for JIRA Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2E91472B419281009272F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2E914C2B419281009272F9 /* LabelSync for JIRA Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LabelSync for JIRA Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2E91512B419281009272F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2E91522B419281009272F9 /* LabelSync for JIRA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LabelSync for JIRA.entitlements"; sourceTree = "<group>"; };
+		3A2E91722B419282009272F9 /* lerpal.svg */ = {isa = PBXFileReference; lastKnownFileType = text; name = lerpal.svg; path = ../../dist/lerpal.svg; sourceTree = "<group>"; };
+		3A2E91732B419282009272F9 /* content.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = content.css; path = ../../dist/content.css; sourceTree = "<group>"; };
+		3A2E91742B419282009272F9 /* options.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = options.js; path = ../../dist/options.js; sourceTree = "<group>"; };
+		3A2E91752B419282009272F9 /* icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon128.png; path = ../../dist/icon128.png; sourceTree = "<group>"; };
+		3A2E91762B419282009272F9 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../dist/manifest.json; sourceTree = "<group>"; };
+		3A2E91772B419282009272F9 /* options.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = options.html; path = ../../dist/options.html; sourceTree = "<group>"; };
+		3A2E91782B419282009272F9 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = content.js; path = ../../dist/content.js; sourceTree = "<group>"; };
+		3A2E91792B419282009272F9 /* options.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; name = options.css; path = ../../dist/options.css; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A2E91202B419281009272F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E91322B419281009272F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E913F2B419281009272F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E91492B419281009272F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A2E910F2B419280009272F9 = {
+			isa = PBXGroup;
+			children = (
+				3A2E91142B419280009272F9 /* Shared (App) */,
+				3A2E911D2B419281009272F9 /* Shared (Extension) */,
+				3A2E91252B419281009272F9 /* iOS (App) */,
+				3A2E91362B419281009272F9 /* macOS (App) */,
+				3A2E91462B419281009272F9 /* iOS (Extension) */,
+				3A2E91502B419281009272F9 /* macOS (Extension) */,
+				3A2E91242B419281009272F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A2E91142B419280009272F9 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E911B2B419280009272F9 /* ViewController.swift */,
+				3A2E911C2B419281009272F9 /* Assets.xcassets */,
+				3A2E91152B419280009272F9 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		3A2E91152B419280009272F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91162B419280009272F9 /* Main.html */,
+				3A2E91182B419280009272F9 /* Icon.png */,
+				3A2E91192B419280009272F9 /* Style.css */,
+				3A2E911A2B419280009272F9 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A2E911D2B419281009272F9 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91712B419282009272F9 /* Resources */,
+				3A2E911E2B419281009272F9 /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		3A2E91242B419281009272F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91232B419281009272F9 /* LabelSync for JIRA.app */,
+				3A2E91352B419281009272F9 /* LabelSync for JIRA.app */,
+				3A2E91422B419281009272F9 /* LabelSync for JIRA Extension.appex */,
+				3A2E914C2B419281009272F9 /* LabelSync for JIRA Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A2E91252B419281009272F9 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91262B419281009272F9 /* AppDelegate.swift */,
+				3A2E91282B419281009272F9 /* SceneDelegate.swift */,
+				3A2E912A2B419281009272F9 /* LaunchScreen.storyboard */,
+				3A2E912D2B419281009272F9 /* Main.storyboard */,
+				3A2E91302B419281009272F9 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		3A2E91362B419281009272F9 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91372B419281009272F9 /* AppDelegate.swift */,
+				3A2E91392B419281009272F9 /* Main.storyboard */,
+				3A2E913C2B419281009272F9 /* Info.plist */,
+				3A2E913D2B419281009272F9 /* LabelSync for JIRA.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		3A2E91462B419281009272F9 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91472B419281009272F9 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		3A2E91502B419281009272F9 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91512B419281009272F9 /* Info.plist */,
+				3A2E91522B419281009272F9 /* LabelSync for JIRA.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		3A2E91712B419282009272F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A2E91722B419282009272F9 /* lerpal.svg */,
+				3A2E91732B419282009272F9 /* content.css */,
+				3A2E91742B419282009272F9 /* options.js */,
+				3A2E91752B419282009272F9 /* icon128.png */,
+				3A2E91762B419282009272F9 /* manifest.json */,
+				3A2E91772B419282009272F9 /* options.html */,
+				3A2E91782B419282009272F9 /* content.js */,
+				3A2E91792B419282009272F9 /* options.css */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A2E91222B419281009272F9 /* LabelSync for JIRA (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2E91672B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA (iOS)" */;
+			buildPhases = (
+				3A2E911F2B419281009272F9 /* Sources */,
+				3A2E91202B419281009272F9 /* Frameworks */,
+				3A2E91212B419281009272F9 /* Resources */,
+				3A2E91662B419281009272F9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A2E91452B419281009272F9 /* PBXTargetDependency */,
+			);
+			name = "LabelSync for JIRA (iOS)";
+			productName = "LabelSync for JIRA (iOS)";
+			productReference = 3A2E91232B419281009272F9 /* LabelSync for JIRA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A2E91342B419281009272F9 /* LabelSync for JIRA (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2E916E2B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA (macOS)" */;
+			buildPhases = (
+				3A2E91312B419281009272F9 /* Sources */,
+				3A2E91322B419281009272F9 /* Frameworks */,
+				3A2E91332B419281009272F9 /* Resources */,
+				3A2E916D2B419281009272F9 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A2E914F2B419281009272F9 /* PBXTargetDependency */,
+			);
+			name = "LabelSync for JIRA (macOS)";
+			productName = "LabelSync for JIRA (macOS)";
+			productReference = 3A2E91352B419281009272F9 /* LabelSync for JIRA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A2E91412B419281009272F9 /* LabelSync for JIRA Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2E91632B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA Extension (iOS)" */;
+			buildPhases = (
+				3A2E913E2B419281009272F9 /* Sources */,
+				3A2E913F2B419281009272F9 /* Frameworks */,
+				3A2E91402B419281009272F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LabelSync for JIRA Extension (iOS)";
+			productName = "LabelSync for JIRA Extension (iOS)";
+			productReference = 3A2E91422B419281009272F9 /* LabelSync for JIRA Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3A2E914B2B419281009272F9 /* LabelSync for JIRA Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A2E916A2B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA Extension (macOS)" */;
+			buildPhases = (
+				3A2E91482B419281009272F9 /* Sources */,
+				3A2E91492B419281009272F9 /* Frameworks */,
+				3A2E914A2B419281009272F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LabelSync for JIRA Extension (macOS)";
+			productName = "LabelSync for JIRA Extension (macOS)";
+			productReference = 3A2E914C2B419281009272F9 /* LabelSync for JIRA Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A2E91102B419280009272F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					3A2E91222B419281009272F9 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					3A2E91342B419281009272F9 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					3A2E91412B419281009272F9 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					3A2E914B2B419281009272F9 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 3A2E91132B419280009272F9 /* Build configuration list for PBXProject "LabelSync for JIRA" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A2E910F2B419280009272F9;
+			productRefGroup = 3A2E91242B419281009272F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A2E91222B419281009272F9 /* LabelSync for JIRA (iOS) */,
+				3A2E91342B419281009272F9 /* LabelSync for JIRA (macOS) */,
+				3A2E91412B419281009272F9 /* LabelSync for JIRA Extension (iOS) */,
+				3A2E914B2B419281009272F9 /* LabelSync for JIRA Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A2E91212B419281009272F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E91552B419281009272F9 /* Icon.png in Resources */,
+				3A2E912C2B419281009272F9 /* LaunchScreen.storyboard in Resources */,
+				3A2E91532B419281009272F9 /* Main.html in Resources */,
+				3A2E91592B419281009272F9 /* Script.js in Resources */,
+				3A2E915D2B419281009272F9 /* Assets.xcassets in Resources */,
+				3A2E912F2B419281009272F9 /* Main.storyboard in Resources */,
+				3A2E91572B419281009272F9 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E91332B419281009272F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E91562B419281009272F9 /* Icon.png in Resources */,
+				3A2E91582B419281009272F9 /* Style.css in Resources */,
+				3A2E913B2B419281009272F9 /* Main.storyboard in Resources */,
+				3A2E915A2B419281009272F9 /* Script.js in Resources */,
+				3A2E915E2B419281009272F9 /* Assets.xcassets in Resources */,
+				3A2E91542B419281009272F9 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E91402B419281009272F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E91822B419282009272F9 /* lerpal.svg in Resources */,
+				3A2E91842B419282009272F9 /* options.js in Resources */,
+				3A2E91862B419282009272F9 /* manifest.json in Resources */,
+				3A2E91852B419282009272F9 /* icon128.png in Resources */,
+				3A2E91832B419282009272F9 /* content.css in Resources */,
+				3A2E91882B419282009272F9 /* content.js in Resources */,
+				3A2E91892B419282009272F9 /* options.css in Resources */,
+				3A2E91872B419282009272F9 /* options.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E914A2B419281009272F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E917A2B419282009272F9 /* lerpal.svg in Resources */,
+				3A2E917C2B419282009272F9 /* options.js in Resources */,
+				3A2E917E2B419282009272F9 /* manifest.json in Resources */,
+				3A2E917D2B419282009272F9 /* icon128.png in Resources */,
+				3A2E917B2B419282009272F9 /* content.css in Resources */,
+				3A2E91802B419282009272F9 /* content.js in Resources */,
+				3A2E91812B419282009272F9 /* options.css in Resources */,
+				3A2E917F2B419282009272F9 /* options.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A2E911F2B419281009272F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E915B2B419281009272F9 /* ViewController.swift in Sources */,
+				3A2E91272B419281009272F9 /* AppDelegate.swift in Sources */,
+				3A2E91292B419281009272F9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E91312B419281009272F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E915C2B419281009272F9 /* ViewController.swift in Sources */,
+				3A2E91382B419281009272F9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E913E2B419281009272F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E915F2B419281009272F9 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A2E91482B419281009272F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2E91602B419281009272F9 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A2E91452B419281009272F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A2E91412B419281009272F9 /* LabelSync for JIRA Extension (iOS) */;
+			targetProxy = 3A2E91442B419281009272F9 /* PBXContainerItemProxy */;
+		};
+		3A2E914F2B419281009272F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A2E914B2B419281009272F9 /* LabelSync for JIRA Extension (macOS) */;
+			targetProxy = 3A2E914E2B419281009272F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A2E91162B419280009272F9 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A2E91172B419280009272F9 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		3A2E912A2B419281009272F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A2E912B2B419281009272F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3A2E912D2B419281009272F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A2E912E2B419281009272F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A2E91392B419281009272F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A2E913A2B419281009272F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A2E91612B419281009272F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A2E91622B419281009272F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		3A2E91642B419281009272F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA.Extension";
+				PRODUCT_NAME = "LabelSync for JIRA Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A2E91652B419281009272F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA.Extension";
+				PRODUCT_NAME = "LabelSync for JIRA Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A2E91682B419281009272F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA";
+				PRODUCT_NAME = "LabelSync for JIRA";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A2E91692B419281009272F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA";
+				PRODUCT_NAME = "LabelSync for JIRA";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A2E916B2B419281009272F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/LabelSync for JIRA.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA.Extension";
+				PRODUCT_NAME = "LabelSync for JIRA Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3A2E916C2B419281009272F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/LabelSync for JIRA.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA.Extension";
+				PRODUCT_NAME = "LabelSync for JIRA Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3A2E916F2B419281009272F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/LabelSync for JIRA.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA";
+				PRODUCT_NAME = "LabelSync for JIRA";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3A2E91702B419281009272F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/LabelSync for JIRA.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LabelSync for JIRA";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourCompany.LabelSync-for-JIRA";
+				PRODUCT_NAME = "LabelSync for JIRA";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A2E91132B419280009272F9 /* Build configuration list for PBXProject "LabelSync for JIRA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2E91612B419281009272F9 /* Debug */,
+				3A2E91622B419281009272F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2E91632B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2E91642B419281009272F9 /* Debug */,
+				3A2E91652B419281009272F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2E91672B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2E91682B419281009272F9 /* Debug */,
+				3A2E91692B419281009272F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2E916A2B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2E916B2B419281009272F9 /* Debug */,
+				3A2E916C2B419281009272F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A2E916E2B419281009272F9 /* Build configuration list for PBXNativeTarget "LabelSync for JIRA (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2E916F2B419281009272F9 /* Debug */,
+				3A2E91702B419281009272F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A2E91102B419280009272F9 /* Project object */;
+}

@@ -1,0 +1,54 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  display: none;
+
+  & + .lbl, & + .lbl::before, & + .lbl::after {
+    transition: all .3s;
+  }
+
+  & + .lbl {
+    display: inline-block;
+    position: relative;
+    width: 52px;
+    height: 24px;
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid var(--jle-gray);
+
+    &::after {
+      border-radius: 50%;
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 4px;
+      width: 14px;
+      height: 14px;
+      background-color: var(--jle-gray);
+    }
+  }
+
+
+  &:checked + .lbl {
+    background-color: var(--jle-accent);
+    border-color: transparent;
+
+    &::after {
+      left: 30px;
+      background-color: #f7f7f7;
+      width: 20px;
+      height: 20px;
+    }
+
+    &::before {
+      color: white;
+    }
+  }
+}
+
